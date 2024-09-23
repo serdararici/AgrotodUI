@@ -1,0 +1,96 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">DroneMarket</string>
+    <string name="field_name">FIELD NAME</string>
+    <string name="open_field">OPEN FIELD</string>
+    <string name="total_field">Total Area:</string>
+    <string name="processed_field">Processed Area:</string>
+    <string name="registration_date">Registration Date:</string>
+    <string name="endWork">End</string>
+    <string name="openABLine">Open A-B Line</string>
+    <string name="mistake">Error</string>
+    <string name="enterValidValue">Enter a valid value.</string>
+    <string name="requiredField">This field cannot be empty!</string>
+    <string name="workWillEnd">Work Will End</string>
+    <string name="confirmEndWorkMessage">Are you sure you want to end the work?</string>
+    <string name="selectABLine">Please select an A-B line.</string>
+    <string name="warning">Warning</string>
+    <string name="changeLanguageMessage">Language cannot be changed while a job is active. Please finish the job to change the language.</string>
+    <string name="noInternetConnection">No internet connection</string>
+    <string name="noInternet">No Internet</string>
+
+    <!--Fields-->
+    <string name="newField">NEW</string>
+    <string name="back">BACK</string>
+    <string name="detail">DETAIL</string>
+    <string name="select">SELECT</string>
+    <string name="delete">DELETE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="deleteConfirm">Delete Confirmation</string>
+    <string name="deleteMessage">Are you sure you want to delete this item?</string>
+    <string name="update">UPDATE</string>
+
+    <!--New Field-->
+    <string name="confirm">CONFIRM</string>
+    <string name="newFieldName">Field Name</string>
+    <string name="enterNewFieldName">Enter field name</string>
+    <string name="newFieldArea">Total Area</string>
+    <string name="enterNewFieldArea">Enter field size (Ha)</string>
+    <string name="addedNewField">New Field Added.</string>
+
+    <!--Update Field-->
+    <string name="updateFieldMessage">Field Updated.</string>
+
+    <!--Field Details-->
+    <string name="showFieldLocation">Show Location</string>
+
+    <!--Tools-->
+    <string name="task">Task: </string>
+    <string name="toolType">Tool Type:</string>
+    <string name="toolWidth">Tool Width:</string>
+
+    <!--New Tool-->
+    <string name="newToolName">Tool Name</string>
+    <string name="enterNewToolName">Enter tool name</string>
+    <string name="newToolType">Tool Type</string>
+    <string name="enterNewToolType">Enter tool type</string>
+    <string name="newToolWidth">Tool Width</string>
+    <string name="enterNewToolWidth">Enter tool width (CM)</string>
+    <string name="addedNewTool">New Tool Added.</string>
+
+    <!--Update Tool-->
+    <string name="updateToolMessage">Tool Updated.</string>
+
+    <!--Work-->
+    <string name="startWork">Start Work</string>
+    <string name="toolInformations">Tool Information</string>
+    <string name="fieldInformations">Field Information</string>
+    <string name="start">START</string>
+    <string name="fieldNameInfo">Field Name:</string>
+    <string name="fieldTotalAreaInfo">Total Area:</string>
+    <string name="fieldProcessedAreaInfo">Processed Area:</string>
+    <string name="toolNameInfo">Tool Name:</string>
+    <string name="toolTypeInfo">Tool Type:</string>
+    <string name="toolWidthInfo">Tool Width:</string>
+
+    <!--Lines-->
+    <string name="straightABLine">Straight A-B Line</string>
+    <string name="curvedABLine">Curved A-B Line</string>
+    <string name="lineDeleted">line deleted!</string>
+
+    <!--New StraightABLine-->
+    <string name="north">North</string>
+    <string name="south">South</string>
+    <string name="east">East</string>
+    <string name="west">West</string>
+    <string name="northEast">Northeast</string>
+    <string name="northWest">Northwest</string>
+    <string name="southEast">Southeast</string>
+    <string name="southWest">Southwest</string>
+    <string name="lineDirection">Line direction</string>
+    <string name="newStraightABLineMessage">New Straight A-B Line Added.</string>
+
+    <!--New CurvedABLine-->
+    <string name="newCurvedABLineMessage">New Curved A-B Line Added.</string>
+</resources>

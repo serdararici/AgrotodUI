@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ab_line_nav"
+    app:startDestination="@id/linesFragment">
+
+    <fragment
+        android:id="@+id/linesFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.LinesFragment"
+        android:label="fragment_lines"
+        tools:layout="@layout/fragment_lines" >
+        <action
+            android:id="@+id/action_linesFragment_to_straightABLineFragment"
+            app:destination="@id/straightABLineFragment" />
+        <action
+            android:id="@+id/action_linesFragment_to_curvedABLineFragment"
+            app:destination="@id/curvedABLineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/straightABLineFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.StraightABLineFragment"
+        android:label="fragment_straight_a_b_line"
+        tools:layout="@layout/fragment_straight_a_b_line" >
+        <action
+            android:id="@+id/action_straightABLineFragment_to_linesFragment"
+            app:destination="@id/linesFragment" />
+        <action
+            android:id="@+id/action_straightABLineFragment_to_newStraightABLineFragment"
+            app:destination="@id/newStraightABLineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newStraightABLineFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.NewStraightABLineFragment"
+        android:label="fragment_new_straight_a_b_line"
+        tools:layout="@layout/fragment_new_straight_a_b_line" >
+        <action
+            android:id="@+id/action_newStraightABLineFragment_to_straightABLineFragment"
+            app:destination="@id/straightABLineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/curvedABLineFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.CurvedABLineFragment"
+        android:label="fragment_curved_a_b_line"
+        tools:layout="@layout/fragment_curved_a_b_line" >
+        <action
+            android:id="@+id/action_curvedABLineFragment_to_linesFragment"
+            app:destination="@id/linesFragment" />
+        <action
+            android:id="@+id/action_curvedABLineFragment_to_newCurvedABLineFragment"
+            app:destination="@id/newCurvedABLineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newCurvedABLineFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.NewCurvedABLineFragment"
+        android:label="fragment_new_curved_a_b_line"
+        tools:layout="@layout/fragment_new_curved_a_b_line" >
+        <action
+            android:id="@+id/action_newCurvedABLineFragment_to_curvedABLineFragment"
+            app:destination="@id/curvedABLineFragment" />
+    </fragment>
+</navigation>

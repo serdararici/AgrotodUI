@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <!--Theme.MaterialComponents.Light.NoActionBar-->
+    <!--Theme.AppCompat.Light.NoActionBar-->
+    <style name="Base.Theme.DroneMarket" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/my_light_primary</item>
+        <item name="android:statusBarColor">@color/white_bar</item>
+    </style>
+
+    <style name="Theme.DroneMarket" parent="Base.Theme.DroneMarket" />
+</resources>

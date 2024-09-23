@@ -1,0 +1,98 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">DroneMarket</string>
+    <string name="field_name">ALAN ADI</string>
+    <string name="open_field">ALAN AÇ</string>
+    <string name="total_field">Toplam Alan:</string>
+    <string name="processed_field">İşlenen Alan:</string>
+    <string name="registration_date">Kayıt Tarihi:</string>
+    <string name="endWork">Bitir</string>
+    <string name="openABLine">A-B Hattı Aç</string>
+    <string name="mistake">Hata</string>
+    <string name="enterValidValue">Geçerli bir değer giriniz.</string>
+    <string name="requiredField">Bu alan boş geçilemez!</string>
+    <string name="workWillEnd">İş Sonlandıralacak</string>
+    <string name="confirmEndWorkMessage">İşi sonlandırmak istediğine emin misin?</string>
+    <string name="selectABLine">AB hattı seçiniz.</string>
+    <string name="warning">Uyarı</string>
+    <string name="changeLanguageMessage">İş aktifken dil değiştirilemez. Dili değiştirmek için işi bitirin.</string>
+    <string name="noInternetConnection">İnternete bağlı değil</string>
+    <string name="noInternet">Internet Yok</string>
+
+    <!--Fields-->
+    <string name="newField">YENİ</string>
+    <string name="back">GERİ</string>
+    <string name="detail">DETAY</string>
+    <string name="select">SEÇ</string>
+    <string name="delete">SİL</string>
+    <string name="cancel">İPTAL</string>
+    <string name="deleteConfirm">Silme Onayı</string>
+    <string name="deleteMessage">Bu öğeyi silmek istediğinizden emin misiniz?</string>
+    <string name="update">GÜNCELLE</string>
+
+    <!--New Field-->
+    <string name="confirm">ONAYLA</string>
+    <string name="newFieldName">Tarla İsmi</string>
+    <string name="enterNewFieldName">Tarla ismi giriniz</string>
+    <string name="newFieldArea">Toplam Alan</string>
+    <string name="enterNewFieldArea">Tarla boyutunu giriniz (Ha)</string>
+    <string name="addedNewField">Yeni Alan Eklendi.</string>
+
+    <!--Update Field-->
+    <string name="updateFieldMessage">Alan Güncellendi.</string>
+
+    <!--Field Details-->
+    <string name="showFieldLocation">Konumu Göster</string>
+
+    <!--Tools-->
+    <string name="task">Yapılan İş: </string>
+    <string name="toolType">Ekipman Türü:</string>
+    <string name="toolWidth">Ekipman Genişlik:</string>
+
+
+    <!--New Tool-->
+    <string name="newToolName">Alet İsmi</string>
+    <string name="enterNewToolName">Alet ismi giriniz</string>
+    <string name="newToolType">Alet Türü</string>
+    <string name="enterNewToolType">Alet türü giriniz</string>
+    <string name="newToolWidth">Alet Genişlik</string>
+    <string name="enterNewToolWidth">Alet genişlik giriniz (CM)</string>
+    <string name="addedNewTool">Yeni Alet Eklendi.</string>
+
+    <!--Update Field-->
+    <string name="updateToolMessage">Ekipman Güncellendi.</string>
+
+    <!--Work-->
+    <string name="startWork">İşe Başla</string>
+    <string name="toolInformations">Ekipman Bilgileri</string>
+    <string name="fieldInformations">Alan Bilgileri</string>
+    <string name="start">BAŞLAT</string>
+    <string name="fieldNameInfo">Alan İsmi:</string>
+    <string name="fieldTotalAreaInfo">Toplam Alan:</string>
+    <string name="fieldProcessedAreaInfo">İşlenen Alan:</string>
+    <string name="toolNameInfo">Ekipman İsmi:</string>
+    <string name="toolTypeInfo">Ekipman Türü:</string>
+    <string name="toolWidthInfo">Ekipman Genişlik:</string>
+
+    <!--Lines-->
+    <string name="straightABLine">Düz A-B Hattı</string>
+    <string name="curvedABLine">Eğik A-B Hattı</string>
+    <string name="lineDeleted">hattı silindi!</string>
+
+    <!--New StraightABLine-->
+    <string name="north">Kuzey</string>
+    <string name="south">Güney</string>
+    <string name="east">Doğu</string>
+    <string name="west">Batı</string>
+    <string name="northEast">Kuzeydoğu</string>
+    <string name="northWest">Kuzeybatı</string>
+    <string name="southEast">Güneydoğu</string>
+    <string name="southWest">Güneybatı</string>
+    <string name="lineDirection">Hat yönü</string>
+    <string name="newStraightABLineMessage">Yeni Düz A-B Hattı Eklendi.</string>
+
+    <!--New CurvedABLine-->
+    <string name="newCurvedABLineMessage">Yeni Eğik A-B Hattı Eklendi.</string>
+
+</resources>

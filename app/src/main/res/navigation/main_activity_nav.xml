@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/toolsFragment">
+
+    <fragment
+        android:id="@+id/fieldsFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.FieldsFragment"
+        android:label="fragment_fields"
+        tools:layout="@layout/fragment_fields" >
+        <action
+            android:id="@+id/action_fieldsFragment_to_newFieldFragment"
+            app:destination="@id/newFieldFragment" />
+        <action
+            android:id="@+id/action_fieldsFragment_to_toolsFragment"
+            app:destination="@id/toolsFragment" />
+        <action
+            android:id="@+id/action_fieldsFragment_to_fieldDetailsFragment"
+            app:destination="@id/fieldDetailsFragment" />
+        <action
+            android:id="@+id/action_fieldsFragment_to_workFragment"
+            app:destination="@id/workFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newFieldFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.NewFieldFragment"
+        android:label="fragment_new_field"
+        tools:layout="@layout/fragment_new_field" >
+        <action
+            android:id="@+id/action_newFieldFragment_to_fieldsFragment"
+            app:destination="@id/fieldsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toolsFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.ToolsFragment"
+        android:label="fragment_tools"
+        tools:layout="@layout/fragment_tools" >
+        <action
+            android:id="@+id/action_toolsFragment_to_fieldsFragment"
+            app:destination="@id/fieldsFragment" />
+        <action
+            android:id="@+id/action_toolsFragment_to_newToolFragment"
+            app:destination="@id/newToolFragment" />
+        <action
+            android:id="@+id/action_toolsFragment_to_toolDetailsFragment"
+            app:destination="@id/toolDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newToolFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.NewToolFragment"
+        android:label="fragment_new_tool"
+        tools:layout="@layout/fragment_new_tool" >
+        <action
+            android:id="@+id/action_newToolFragment_to_toolsFragment"
+            app:destination="@id/toolsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fieldDetailsFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.FieldDetailsFragment"
+        android:label="fragment_field_details"
+        tools:layout="@layout/fragment_field_details" >
+        <action
+            android:id="@+id/action_fieldDetailsFragment_to_fieldsFragment"
+            app:destination="@id/fieldsFragment" />
+        <argument
+            android:name="field"
+            app:argType="com.serdararici.dronemarket.data.entitiy.Field" />
+        <action
+            android:id="@+id/action_fieldDetailsFragment_to_fieldUpdateFragment"
+            app:destination="@id/fieldUpdateFragment"
+            app:popUpTo="@id/fieldDetailsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_fieldDetailsFragment_to_fieldLocationOnMapFragment"
+            app:destination="@id/fieldLocationOnMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toolDetailsFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.ToolDetailsFragment"
+        android:label="fragment_tool_details"
+        tools:layout="@layout/fragment_tool_details" >
+        <action
+            android:id="@+id/action_toolDetailsFragment_to_toolsFragment"
+            app:destination="@id/toolsFragment" />
+        <argument
+            android:name="tool"
+            app:argType="com.serdararici.dronemarket.data.entitiy.Tool" />
+        <action
+            android:id="@+id/action_toolDetailsFragment_to_toolUpdateFragment"
+            app:destination="@id/toolUpdateFragment"
+            app:popUpTo="@id/toolDetailsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fieldUpdateFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.FieldUpdateFragment"
+        android:label="fragment_field_update"
+        tools:layout="@layout/fragment_field_update" >
+        <action
+            android:id="@+id/action_fieldUpdateFragment_to_fieldDetailsFragment"
+            app:destination="@id/fieldDetailsFragment" />
+        <argument
+            android:name="field"
+            app:argType="com.serdararici.dronemarket.data.entitiy.Field" />
+    </fragment>
+    <fragment
+        android:id="@+id/toolUpdateFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.ToolUpdateFragment"
+        android:label="fragment_tool_update"
+        tools:layout="@layout/fragment_tool_update" >
+        <action
+            android:id="@+id/action_toolUpdateFragment_to_toolDetailsFragment"
+            app:destination="@id/toolDetailsFragment" />
+        <argument
+            android:name="tool"
+            app:argType="com.serdararici.dronemarket.data.entitiy.Tool" />
+    </fragment>
+    <fragment
+        android:id="@+id/workFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.WorkFragment"
+        android:label="fragment_work"
+        tools:layout="@layout/fragment_work" >
+        <action
+            android:id="@+id/action_workFragment_to_fieldsFragment"
+            app:destination="@id/fieldsFragment" />
+        <action
+            android:id="@+id/action_workFragment_to_toolsFragment"
+            app:destination="@id/toolsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fieldLocationOnMapFragment"
+        android:name="com.serdararici.dronemarket.ui.fragment.FieldLocationOnMapFragment"
+        android:label="fragment_field_location_on_map"
+        tools:layout="@layout/fragment_field_location_on_map" >
+        <action
+            android:id="@+id/action_fieldLocationOnMapFragment_to_fieldDetailsFragment"
+            app:destination="@id/fieldDetailsFragment" />
+    </fragment>
+</navigation>

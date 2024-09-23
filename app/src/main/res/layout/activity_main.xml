@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <!-- En üstteki beyaz bar -->
+
+        <View
+            android:id="@+id/top_white_bar"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@color/white_bar"
+            android:elevation="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- En üstteki beyaz bar - saat göstergesi-->
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:elevation="15dp"
+            android:text="00:00"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/top_white_bar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/top_white_bar" />
+
+        <!-- En üstteki beyaz bar - Agrotod logo-->
+
+        <ImageView
+            android:id="@+id/ivAgrotodLogo"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:elevation="15dp"
+            android:rotation="-1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/top_white_bar"
+            app:layout_constraintTop_toTopOf="@+id/top_white_bar"
+            app:srcCompat="@drawable/agrotod_logo" />
+
+        <!-- En üstteki beyaz bar sağ taraf-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewWifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardElevation="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivWifi"
+                    android:layout_width="28dp"
+                    android:layout_height="37dp"
+                    android:elevation="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/vector_wifi" />
+
+                <TextView
+                    android:id="@+id/tvWifiLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LTE"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="@+id/ivWifi"
+                    app:layout_constraintStart_toStartOf="@+id/ivWifi"
+                    app:layout_constraintTop_toBottomOf="@+id/ivWifi" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSatellite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardElevation="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewWifi"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivSatellite"
+                    android:layout_width="28dp"
+                    android:layout_height="37dp"
+                    android:elevation="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon_satellite" />
+
+                <TextView
+                    android:id="@+id/tvSatelliteLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="40"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="@+id/ivSatellite"
+                    app:layout_constraintStart_toStartOf="@+id/ivSatellite"
+                    app:layout_constraintTop_toBottomOf="@+id/ivSatellite" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSatelliteAccuracy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardElevation="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewSatellite"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivSatelliteAccuracy"
+                    android:layout_width="28dp"
+                    android:layout_height="37dp"
+                    android:elevation="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon_accuracy" />
+
+                <TextView
+                    android:id="@+id/tvSatelliteAccuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.7 CM"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="@+id/ivSatelliteAccuracy"
+                    app:layout_constraintStart_toStartOf="@+id/ivSatelliteAccuracy"
+                    app:layout_constraintTop_toBottomOf="@+id/ivSatelliteAccuracy" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            app:cardElevation="15dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/top_white_bar"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewSatelliteAccuracy"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivLanguage"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/turkish_flag_icon" />
+
+                <TextView
+                    android:id="@+id/tvLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TR"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/ivLanguage"
+                    app:layout_constraintStart_toStartOf="@+id/ivLanguage"
+                    app:layout_constraintTop_toBottomOf="@+id/ivLanguage" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Üstteki Beyaz Barın Kavisli Çıkıntısı -->
+
+        <View
+            android:id="@+id/white_curve"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@drawable/curve_shape"
+            android:elevation="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_white_bar" />
+
+        <!-- Üstteki Beyaz Barın Kavisli Çıkıntısı - tasarım -->
+
+        <LinearLayout
+            android:id="@+id/linearLayoutLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:elevation="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/white_curve"
+            app:layout_constraintStart_toStartOf="@+id/white_curve"
+            app:layout_constraintTop_toBottomOf="@+id/ivAgrotodLogo">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:alpha="1.0"
+                android:src="@drawable/triangle_left" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:alpha="0.8"
+                android:src="@drawable/triangle_left" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:alpha="0.6"
+                android:src="@drawable/triangle_left" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:alpha="0.4"
+                android:src="@drawable/triangle_left" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:alpha="0.2"
+                android:src="@drawable/triangle_left" />
+
+            <ImageView
+                android:id="@+id/ivTriAngleLeft1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:alpha="0.1"
+                android:src="@drawable/triangle_left" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPivotDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="15dp"
+            android:text="0.0 CM"
+            android:textColor="#A6A6A6"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toBottomOf="@+id/white_curve"
+            app:layout_constraintLeft_toRightOf="@id/linearLayoutLeft"
+            app:layout_constraintRight_toLeftOf="@id/linearLayoutRight"
+            app:layout_constraintTop_toBottomOf="@+id/ivAgrotodLogo" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:elevation="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/white_curve"
+            app:layout_constraintEnd_toEndOf="@+id/white_curve"
+            app:layout_constraintTop_toBottomOf="@+id/ivAgrotodLogo">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:alpha="1.0"
+                android:src="@drawable/triangel_right" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:alpha="0.8"
+                android:src="@drawable/triangel_right" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:alpha="0.6"
+                android:src="@drawable/triangel_right" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:alpha="0.4"
+                android:src="@drawable/triangel_right" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:alpha="0.2"
+                android:src="@drawable/triangel_right" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:alpha="0.1"
+                android:src="@drawable/triangel_right" />
+        </LinearLayout>
+
+        <!-- Alttaki Yeşil Bar -->
+
+        <View
+            android:id="@+id/bottom_green_bar"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:background="@color/green_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_white_bar" />
+
+        <ImageView
+            android:id="@+id/fieldNameIcon"
+            android:layout_width="40dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bottom_green_bar"
+            app:layout_constraintStart_toStartOf="@+id/bottom_green_bar"
+            app:layout_constraintTop_toBottomOf="@+id/top_white_bar"
+            app:srcCompat="@drawable/baseline_location_on_24_black" />
+
+        <TextView
+            android:id="@+id/tvFieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/field_name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/bottom_green_bar"
+            app:layout_constraintStart_toEndOf="@+id/fieldNameIcon"
+            app:layout_constraintTop_toBottomOf="@+id/top_white_bar" />
+
+        <!-- alltaki yeşil bar - width-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewWidth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="64dp"
+            app:cardBackgroundColor="@color/green_bar"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bottom_green_bar"
+            app:layout_constraintEnd_toStartOf="@+id/white_curve"
+            app:layout_constraintTop_toBottomOf="@+id/top_white_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivWidth"
+                    android:layout_width="54dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon_width" />
+
+                <TextView
+                    android:id="@+id/tvWidth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 CM"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/ivWidth"
+                    app:layout_constraintStart_toStartOf="@+id/ivWidth"
+                    app:layout_constraintTop_toBottomOf="@+id/ivWidth" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Alttaki yeşil bar - fieldTime-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewFieldTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            app:cardBackgroundColor="@color/green_bar"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bottom_green_bar"
+            app:layout_constraintStart_toEndOf="@+id/white_curve"
+            app:layout_constraintTop_toBottomOf="@+id/top_white_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivFieldTime"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon_field_time" />
+
+                <TextView
+                    android:id="@+id/tvFieldTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00.00"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/ivFieldTime"
+                    app:layout_constraintStart_toStartOf="@+id/ivFieldTime"
+                    app:layout_constraintTop_toBottomOf="@+id/ivFieldTime" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Alttaki yeşil bar - fieldArea-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewFieldArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/green_bar"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bottom_green_bar"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewSpeed"
+            app:layout_constraintStart_toEndOf="@+id/cardViewFieldTime"
+            app:layout_constraintTop_toBottomOf="@+id/top_white_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/ivFieldArea"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon_field_area" />
+
+                <TextView
+                    android:id="@+id/tvFieldArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0 Ha"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/ivFieldArea"
+                    app:layout_constraintStart_toStartOf="@+id/ivFieldArea"
+                    app:layout_constraintTop_toBottomOf="@+id/ivFieldArea" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Alttaki Yeşil Bar - speed-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            app:cardBackgroundColor="@color/green_bar"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bottom_green_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottom_green_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivSpeed"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon_speed" />
+
+                <TextView
+                    android:id="@+id/tvSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5.6 KM/S"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/ivSpeed"
+                    app:layout_constraintStart_toStartOf="@+id/ivSpeed"
+                    app:layout_constraintTop_toBottomOf="@+id/ivSpeed" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!--en alttaki openField butonu-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewOpenField"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:visibility="visible"
+            app:cardBackgroundColor="#FFD833"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvOpenField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/open_field"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivOpenField" />
+
+                <ImageView
+                    android:id="@+id/ivOpenField"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon_field" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerViewMain"
+            android:name="com.serdararici.dronemarket.ui.fragment.MainFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottom_green_bar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewOpenABLine"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/blue"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardViewEndWork"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvOpenABLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/openABLine"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewEndWork"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/red"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/ivWheel"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvEndWork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/endWork"
+                    android:textColor="@color/white"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/ivWheel"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/black_wheel_icon" />
+
+        <ImageView
+            android:id="@+id/ivTractorIcon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottom_green_bar"
+            app:srcCompat="@drawable/tractor_icon" />
+
+        <TextView
+            android:id="@+id/tvlineNameMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottom_green_bar" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--yandan açılan panel-->
+
+    <LinearLayout
+        android:id="@+id/side_panel"
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/rounded_background"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <!-- Panel içeriği -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navGraph="@navigation/main_activity_nav" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Diğer panel içeriği buraya gelecek -->
+
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
