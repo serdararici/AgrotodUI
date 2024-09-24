@@ -17,7 +17,7 @@ Bu projede MVVM (Model-View-ViewModel) mimarisi kullanarak daha modüler, sürd�
 - **LiveData**: Verilerin UI ile dinamik senkronizasyonunu sağladı.
 - **RecyclerView**: Verilerin liste görünümünde gösterilmesi için kullanıldı.
 - **Dagger Hilt**: Bağımlılık yönetimi için kullanıldı.
-- **Google Maps API**: Traktörlerin gerçek zamanlı konumlarını harita üzerinde görüntülemek için entegre edildi.
+- **Google Maps API**: Tarlaların gerçek zamanlı konumlarını harita üzerinde görüntülemek için entegre edildi.
 - **Lokasyon İşlemleri**: Kullanıcılara tarım alanında doğru ve güncel konum bilgileri sunmak için kullanıldı.
 
 ## Projenin Kazandırdıkları
