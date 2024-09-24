@@ -6,6 +6,8 @@ Proje kapsamında Android Studio üzerinde Java dilini kullanarak, kullanıcı d
 
 Bu projede MVVM (Model-View-ViewModel) mimarisi kullanarak daha modüler, sürdürülebilir ve yönetilebilir bir kod yapısı oluşturdum. LiveData ile verilerin kullanıcı arayüzüyle dinamik bir şekilde senkronize olmasını sağladım ve RecyclerView kullanarak verilerin liste görünümünde verimli bir şekilde gösterilmesini sağladım. Kod yapısını daha temiz ve bağımlılıkları yönetilebilir kılmak için Dagger Hilt ile Dependency Injection prensibini uyguladım.
 
+![Agrotod App](https://github.com/serdararici/AgrotodUI/blob/master/Agrotod.png)
+
 ## Kullanılan Teknolojiler
 
 - **Android Studio**
